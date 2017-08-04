@@ -1,0 +1,60 @@
+{{#partial "content"}}
+
+    {{#with entry}}
+
+
+        <header>
+            <div class="container">
+                <div class="site-header">
+                    <a class="logo" href="/">SparkBlog</a>
+                    <a class="new-entry button button-round" href="/new"><i class="material-icons">create</i></a>
+                </div>
+            </div>
+        </header>
+        {{#if flashMessage}}
+            <p id=flash-message>{{flashMessage}}</p>
+        {{/if}}
+        <section>
+            <div class="container">
+                <div class="entry-list single">
+                    <article>
+                        <h1>{{title}}</h1>
+                        <time>{{date}}</time>
+                        <div class="entry">
+                            <p>{{body}}</p>
+                            <p><a class="link" href="/edit/{{slug}}">Edit Entry</a></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="entry-comments">
+            <div class="container">
+                <h2>Comments</h2>
+                {{#each comments}}
+                    <div class="comment">
+                        <strong>{{name}}</strong>
+                        <time datetime>{{date}}</time>
+                        <p>{{body}}</p>
+                    </div>
+                {{/each}}
+                <div class="new-comment">
+                    <form action="/entry/{{slug}}/comment" method="post">
+                        <label for="name"> Name</label>
+                        <input type="text" name="name"><br>
+                        <label for="comment">Comment</label>
+                        <textarea rows="5" name="comment"></textarea>
+                        <input type="submit" value="Post Comment" class="button">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+
+
+    {{/with}}
+
+{{/partial}}
+
+{{> base.hbs}}
+
