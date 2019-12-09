@@ -5,12 +5,11 @@ Build a blog web site, using Spark, a framework for developing sites with Java. 
 
 [//]: # 
 
-![GitHub Logo](/docs/start-page.png)
+![Start page](/docs/start-page.png)
 
-![GitHub Logo](/docs/login-page.png)
+![Login page](/docs/login-page.png)
 
-![GitHub Logo](/docs/new-blog.png)
+![New blog](/docs/new-blog.png)
 
-![GitHub Logo](/docs/new-comment.png)
-
+![New comment](/docs/new-comment.png)
 
